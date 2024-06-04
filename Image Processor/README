@@ -1,0 +1,11 @@
+Implementarile utilizeaza idei simple de la lucrul cu matricile: flip copie elementele de la dreapta la stanga in imaginea noua,
+rotate copie elementele si inverseaza dimensiunile, crop creaza o imagine noua cu dimensiunile hxw, si copie elemntele necesare in ea
+verificand totodata daca zona de crop nu iese in afara imaginii. Extend adauga 2 fasii de grosime cols la inceputul si sfrsitul imaginii
+noi, dupa care completeaza rows linii din capat si primele 2 fasii cu culoarea ceruta. Tinand cont de faptul ca nu este o cerinta a exercitiului, 
+paste copiaza direct peste memorie fara a verifica, de asta daca userul incearca sa copie neatent o imagine peste ea insasi va obtine 
+niste artefacte (probabil) nedorite. Intr-un final pentru functia de aplicare a filtrelor, am setat un offset de la pixelul din centrul tabloului filtru
+si apoi am adugat toate modificarile facute la pixel in variabile temporare, pe care in final le punem in pixelul corespunzator din imaginea target.
+
+Fisierul interactive.c contine doar functia main, in care, prin intermediul unei constructii if else si ajutorul functiei strcmp, selectam cazul corespunzator comenzii introduse.
+Tot ce ramane e sa citim numarul de argumente necesare si sa apelam functiile din fisierul imageprocessing. De notat ca toate alocarile si realocarile din interactive.c sunt
+dinamice, deci atata timp cat avem destula memorie RAM, putem realiza oricate comenzi.
